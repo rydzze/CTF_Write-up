@@ -1,4 +1,4 @@
-###First Step
+### First Step
 
 Unzip The_Kolona_Virus_2.zip file and convert the python compile file into the source code. <br> Under the same directory as the file, use command `uncompyle6 spread_kolona.pyc > spread_kolona.py` to convert the file into source code.
 
