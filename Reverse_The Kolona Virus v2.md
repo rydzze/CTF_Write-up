@@ -1,4 +1,4 @@
-##### First Step
+### First Step
 
 Unzip The_Kolona_Virus_2.zip file and convert the Python compile file into the source code. <br> Under the same directory as the file, use command `uncompyle6 spread_kolona.pyc > spread_kolona.py` to convert the file into source code.
 
@@ -22,7 +22,7 @@ Lastly, `evolve_virus` is an empty string.
 Next, the for() loop is used to loop every char from `original_virus` variable and SUB with the nested array of `kolona_genome` & `kolona_rna` and a nested array of `kolona_genome` & `kolona_rna2` ~~(sorry, idk how to explain it properly but you get the idea :D)~~.
 So, this loop involves SUB operation and we can solve it by using [cyberchef](https://gchq.github.io/CyberChef/#recipe=SUB(%7B'option':'Hex','string':''%7D)SUB(%7B'option':'Hex','string':''%7D)).
 
-##### Second Step
+### Second Step
 
 Upload the `original_virus` file in the input section.
 
@@ -65,4 +65,4 @@ for i in range(len(evolved_virus)):
 exec(code)
 ```
 
-#### Third Step
+### Third Step
