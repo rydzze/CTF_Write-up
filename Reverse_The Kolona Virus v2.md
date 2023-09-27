@@ -115,7 +115,11 @@ for i,c in enumerate(flag.read()):
 
 Based on the source code, `flag` variable will open flag.png file, `kolona` variable will write the output into `flag.kolona` file and the key given is "SARS-CoV-2". Then, we have `random_num` variable act as a randomiser that will give a random integer in the range of 1 to 6666. 
 
-### Fourth Step
+
+
+### o-------------o
+### | Fourth Step |
+### o-------------o
 
 We can try to change `flag.kolona` file into `flag.png, nonetheless, it is still corrupted. So, we can use [CyberChef](https://gchq.github.io/CyberChef/#recipe=ADD(%7B'option':'UTF8','string':''%7D)ADD(%7B'option':'Decimal','string':''%7D)) to recover the file.
 
@@ -127,13 +131,22 @@ ADD the key given, "SARS-CoV-2" and change the output format to UTF8.
 
 ![image](https://github.com/arffrdzln/SKR-CTF_Write-up/assets/86187059/05744419-f50f-4d42-8fd4-b7ea0b603df8)
 
-However, we are still missing the second key that can be obtained from the randomiser, `random_num` variable. The key can help us to recover and read the file. What we can do now is change the file signature into PNG file signature
+However, we are still missing the second key that can be obtained from the randomiser, `random_num` variable. The key can help us to recover and read the file. What we can do now is change the file signature into PNG file signature.
 
 ```python
-flag_kolona = "EA8DADA8224BB371151F614A"
-flag_png = "89504E470D0A1A0A0000000D"
+flag_kolona = "EA8DADA8224BB371151F"
+flag_png = "89504E470D0A1A0A0000"
 seckey = hex(int(flag_kolona, 16) - int(flag_png, 16))
+# kolona + seckey = png   -->   - seckey = kolona - png
 
 print(str(seckey)[2:].upper())
-#OUTPUT = 613D5F6115419967151F613D
+# OUTPUT
+# - seckey = 613D5F6115419967151F
 ```
+The code above is a script to find the value of the second key. For the file signature, let us take up to 20 bytes. Since the value of the second key should be negative, we will SUB the value and make sure the output format is HEX. 
+
+![image](https://github.com/arffrdzln/SKR-CTF_Write-up/assets/86187059/eb3fcfe4-8756-44cc-bd86-faf31141e2e3)
+
+After that, we will see the `PNG` file signature in the output and then a magic pen appeared beside the "Output" text. Click on it, the output will be displayed as well as the flag.
+
+![image](https://github.com/arffrdzln/SKR-CTF_Write-up/assets/86187059/3e59b993-2107-4885-bda6-e33e4ca42f96)
