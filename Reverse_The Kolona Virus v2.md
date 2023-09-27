@@ -1,4 +1,4 @@
-### First Step
+### |-o- First Step -o-|
 
 Unzip The_Kolona_Virus_2.zip file and convert the Python compile file into the source code. <br> Under the same directory as the file, use command `uncompyle6 spread_kolona.pyc > spread_kolona.py` to convert the file into source code.
 
@@ -22,7 +22,7 @@ Lastly, `evolve_virus` variable is an empty string.
 Next, the for() loop is used to loop every char from `original_virus` variable and SUB with the nested array of `kolona_genome` & `kolona_rna` and a nested array of `kolona_genome` & `kolona_rna2` ~~(sorry, idk how to explain it properly but you get the idea :D)~~.
 So, this loop involves SUB operation and we can solve it by using [CyberChef](https://gchq.github.io/CyberChef/#recipe=SUB(%7B'option':'Hex','string':''%7D)SUB(%7B'option':'Hex','string':''%7D)).
 
-### Second Step
+### |-o- Second Step -o-|
 
 Upload the `original_virus` file in the input section.
 
@@ -71,7 +71,7 @@ The source code will open `MT568643` file to read and save the content in a vari
 Lastly, `code` variable is an empty string.
 Next, the for() loop is used to loop every char from `evolve_virus` variable and again, SUB with the nested array of `kolona_genome` & `kolona_rna1` and a nested array of `kolona_genome` & `kolona_rna2`. We can solve it by using [CyberChef](https://gchq.github.io/CyberChef/#recipe=SUB(%7B'option':'Hex','string':''%7D)SUB(%7B'option':'Hex','string':''%7D)) just like before.
 
-### Third Step
+### |-o- Third Step -o-|
 
 Upload the `evolved_virus` file in the input section.
 
@@ -117,11 +117,10 @@ Based on the source code, `flag` variable will open flag.png file, `kolona` vari
 
 
 
-### o-------------o
-### | Fourth Step |
-### o-------------o
+### |-o- Fourth Step -o-|
 
-We can try to change `flag.kolona` file into `flag.png, nonetheless, it is still corrupted. So, we can use [CyberChef](https://gchq.github.io/CyberChef/#recipe=ADD(%7B'option':'UTF8','string':''%7D)ADD(%7B'option':'Decimal','string':''%7D)) to recover the file.
+
+We can try to change `flag.kolona` file into `flag.png`, nonetheless, it is still corrupted. So, we can use [CyberChef](https://gchq.github.io/CyberChef/#recipe=ADD(%7B'option':'UTF8','string':''%7D)ADD(%7B'option':'Decimal','string':''%7D)) to recover the file.
 
 Upload the `flag.kolona` file in the input section.
 
