@@ -47,6 +47,7 @@ for i in range(len(kolona_rna2)):
 ```
 
 Then, we can insert the keys and change the output format to UTF8.
+
 ![image](https://github.com/arffrdzln/SKR-CTF_Write-up/assets/86187059/0e64c4d1-5b21-47b6-8392-731f639dff14)
 
 We will see another output which is a Python source code.
