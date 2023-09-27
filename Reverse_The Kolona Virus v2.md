@@ -20,7 +20,7 @@ The source code will open `MT568643` file to read and save the content in a vari
 `original_virus` variable will open `original_virus` file to read and save its content.
 Lastly, `evolve_virus` variable is an empty string.
 Next, the for() loop is used to loop every char from `original_virus` variable and SUB with the nested array of `kolona_genome` & `kolona_rna` and a nested array of `kolona_genome` & `kolona_rna2` ~~(sorry, idk how to explain it properly but you get the idea :D)~~.
-So, this loop involves SUB operation and we can solve it by using [cyberchef](https://gchq.github.io/CyberChef/#recipe=SUB(%7B'option':'Hex','string':''%7D)SUB(%7B'option':'Hex','string':''%7D)).
+So, this loop involves SUB operation and we can solve it by using [CyberChef](https://gchq.github.io/CyberChef/#recipe=SUB(%7B'option':'Hex','string':''%7D)SUB(%7B'option':'Hex','string':''%7D)).
 
 ### Second Step
 
@@ -69,7 +69,7 @@ The source code will open `MT568643` file to read and save the content in a vari
 `kolona_rna1` and `kolona_rna2` are arrays that store 20 integers (index for characters in `MT568643` file).
 `evolve_virus` variable will open `evolve_virus` file to read and save its content.
 Lastly, `code` variable is an empty string.
-Next, the for() loop is used to loop every char from `evolve_virus` variable and again, SUB with the nested array of `kolona_genome` & `kolona_rna1` and a nested array of `kolona_genome` & `kolona_rna2`. We can solve it by using [cyberchef](https://gchq.github.io/CyberChef/#recipe=SUB(%7B'option':'Hex','string':''%7D)SUB(%7B'option':'Hex','string':''%7D)) just like before.
+Next, the for() loop is used to loop every char from `evolve_virus` variable and again, SUB with the nested array of `kolona_genome` & `kolona_rna1` and a nested array of `kolona_genome` & `kolona_rna2`. We can solve it by using [CyberChef](https://gchq.github.io/CyberChef/#recipe=SUB(%7B'option':'Hex','string':''%7D)SUB(%7B'option':'Hex','string':''%7D)) just like before.
 
 ### Third Step
 
@@ -113,4 +113,27 @@ for i,c in enumerate(flag.read()):
 	kolona.write(chr((ord(c) + ord(key[i % len(key)]) + random_num) % 256))
 ```
 
+Based on the source code, `flag` variable will open flag.png file, `kolona` variable will write the output into `flag.kolona` file and the key given is "SARS-CoV-2". Then, we have `random_num` variable act as a randomiser that will give a random integer in the range of 1 to 6666. 
+
 ### Fourth Step
+
+We can try to change `flag.kolona` file into `flag.png, nonetheless, it is still corrupted. So, we can use [CyberChef](https://gchq.github.io/CyberChef/#recipe=ADD(%7B'option':'UTF8','string':''%7D)ADD(%7B'option':'Decimal','string':''%7D)) to recover the file.
+
+Upload the `flag.kolona` file in the input section.
+
+![image](https://github.com/arffrdzln/SKR-CTF_Write-up/assets/86187059/6dacbe69-f31b-49f0-8d83-8fec05ae9641)
+
+ADD the key given, "SARS-CoV-2" and change the output format to UTF8.
+
+![image](https://github.com/arffrdzln/SKR-CTF_Write-up/assets/86187059/05744419-f50f-4d42-8fd4-b7ea0b603df8)
+
+However, we are still missing the second key that can be obtained from the randomiser, `random_num` variable. The key can help us to recover and read the file. What we can do now is change the file signature into PNG file signature
+
+```python
+flag_kolona = "EA8DADA8224BB371151F614A"
+flag_png = "89504E470D0A1A0A0000000D"
+seckey = hex(int(flag_kolona, 16) - int(flag_png, 16))
+
+print(str(seckey)[2:].upper())
+#OUTPUT = 613D5F6115419967151F613D
+```
