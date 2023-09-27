@@ -13,7 +13,7 @@ for i in range(len(original_virus)):
 exec(evolve_virus)
 ```
 
-*The source code will open `MT568643` file to read and save the content in a variable, `kolona_genome'.* <br>
-*`kolona_rna` and `kolona_rna2` are arrays that store characters from `MT568643` file.* <br>
-*`original_virus` variable will open `original_virus` file to read and save it content.* <br>
-*Lastly, `evolve_virus` is an empty string.*
+The source code will open `MT568643` file to read and save the content in a variable, `kolona_genome`.
+`kolona_rna` and `kolona_rna2` are arrays that store characters from `MT568643` file.
+`original_virus` variable will open `original_virus` file to read and save it content.
+Lastly, `evolve_virus` is an empty string.
