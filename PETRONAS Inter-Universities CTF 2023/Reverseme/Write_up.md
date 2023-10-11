@@ -6,7 +6,7 @@ Disassemble `myapps.apk` using `apktool` and dive deep into the source code to f
 
 #### Solution
 
-Let's start the challenge by reading `myapps.apk` using the APK decompiler. In this case, I used `jadx-gui` in Kali Linux.
+Let's start the challenge by reading `myapps.apk` using an APK decompiler. In this case, I used `jadx-gui` in Kali Linux.
 
 Whenever they give us an APK file, jump straight to the `MainActivity` inside /com directory.
 
