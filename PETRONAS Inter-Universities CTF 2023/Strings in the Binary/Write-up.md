@@ -1,6 +1,6 @@
 ## Strings in the Binary
 
-### 📚Overview
+### 📚 Overview
 
 Change the hex value in `obscured_flag.bin` to get the flag from the decoded text by using HxD (Hex Editor).
 
