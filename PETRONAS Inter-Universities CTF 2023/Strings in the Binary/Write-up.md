@@ -1,10 +1,10 @@
-### Strings in the Binary
+## Strings in the Binary
 
-#### Overview
+### 📚Overview
 
 Change the hex value in `obscured_flag.bin` to get the flag from the decoded text by using HxD (Hex Editor).
 
-#### Solution
+### ✨ Solution
 
 Open the file and you will find that the flag is incomplete. It looks like the hex value represents the ASCII characters.
 
@@ -16,6 +16,6 @@ Since we know the format of the flag is `petgrad2023{xxxxx}`, here is what I cam
 
 ![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/546b6249-b17a-4918-8356-093f07be2109)
 
-#### Flag
+### 🏳️ Flag
 
 Hence, the flag is `petgrad2023{B1nary_Exp10r3r}` 
