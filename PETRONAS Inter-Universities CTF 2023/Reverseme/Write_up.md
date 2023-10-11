@@ -1,10 +1,10 @@
-### Reverseme
+## Reverseme
 
-#### Overview
+### 📚 Overview
 
 Disassemble `myapps.apk` using `apktool` and dive deep into the source code to find the flag.
 
-#### Solution
+### ✨ Solution
 
 Let's start the challenge by reading `myapps.apk` using an APK decompiler. In this case, I used `jadx-gui` in Kali Linux.
 
@@ -20,6 +20,6 @@ After that, go to ~/myapps/res/values directory and use this command, `strings *
 
 ![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/855ffcd0-9f42-4806-bda9-5eb321d94dce)
 
-#### Flag
+###  🏳️ Flag
 
 Hence, the flag is `{PETGRAD2023}_S1mPl3Fl4g` (Accepted due to the author's error)  
