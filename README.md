@@ -1,5 +1,3 @@
-# SKR-CTF_Write-up
+## CTF Write-up
 
-*_total beginner_ and _new_ in CTF,*
-<br>
-*~~highly~~ interested in learning and solving **Reverse Engineering***
+mainly focusing on **Reverse Engineering** and **Binary Exploitation**
