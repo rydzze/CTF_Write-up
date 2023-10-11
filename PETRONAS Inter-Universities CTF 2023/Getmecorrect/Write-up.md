@@ -1,14 +1,14 @@
-### Getmecorrect
+## Getmecorrect
 
-#### 📚 Overview
+### 📚 Overview
 
 Debug `dynamic.apk` using `Android Studio` and dive deep into the source code to find the flag.
 
-#### 🤔 Hint
+### 🤔 Hint
 
 > _"While Java holds the clues, the real answers may lie in the realm of native libraries."_
 
-#### ✨ Solution
+### ✨ Solution
 
 Let's start the challenge by reading `dynamic.apk` using an APK decompiler. In this case, I used `jadx-gui` in Kali Linux.
 
@@ -46,6 +46,6 @@ After the debugging process, I still didn't manage to open the file so I hopped 
 
 ![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/f47a3c69-0385-4942-91e4-b049935b99f1)
 
-#### 🏳️ Flag
+### 🏳️ Flag
 
 Hence, the flag is `petgrad2023{Qu@ntum_N3xu$_C0d3br3@k3r}`
