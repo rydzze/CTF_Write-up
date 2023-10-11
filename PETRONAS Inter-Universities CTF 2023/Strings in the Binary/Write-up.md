@@ -6,11 +6,11 @@ Change the hex value in `obscured_flag.bin` to get the flag from the decoded tex
 
 #### Solution
 
-Open the file and you will find that the flag is incomplete.
+Open the file and you will find that the flag is incomplete. It looks like the hex value represents the ASCII characters.
 
 ![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/a137cbc0-ab72-40d9-8994-39975a5137a0)
 
-It looks like the hex value represents the ASCII characters. Since we know the format of the flag is `petgrad2023{xxxxx}`, here is what I came up with:
+Since we know the format of the flag is `petgrad2023{xxxxx}`, here is what I came up with:
 - Increase the hex value by 20 if the decoded text is an uppercase letter, symbol, or blank.
 - Decrease the hex value by 20 if the decoded text is a lowercase letter.
 
