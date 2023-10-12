@@ -157,4 +157,5 @@ The code above is a script to find the value of the second key. For the file sig
 
 After that, we will see the `PNG` file signature in the output and then a magic pen appeared beside the "Output" text. Click on it, the output will be displayed as well as the flag.
 
-![image](https://github.com/arffrdzln/SKR-CTF_Write-up/assets/86187059/3e59b993-2107-4885-bda6-e33e4ca42f96)
+![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/cf7f2f49-533b-4d43-b560-3692c3e78701)
+
