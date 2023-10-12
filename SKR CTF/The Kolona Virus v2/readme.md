@@ -1,5 +1,5 @@
 # The Kolona Virus v2
-_please let me know if there are some mistakes ;)_
+_please let me know if there are any mistakes ;)_
 
 
 
