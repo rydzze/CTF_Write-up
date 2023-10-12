@@ -20,7 +20,15 @@ The flag is inside the safe box :)
 
 ### 🤬 My Argument
 
-In my opinion, the PIN number of the safe box should not be 89076 because it doesn't pass the checking. Let's take a look at the decompiled source code. 
+In my opinion, the PIN number of the safe box should not be 89076 because it doesn't pass the checking. Let's take a look at the function graph.
+
+![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/0f129328-2b56-4a69-a382-a99e29140b6b)
+
+We could see that `r16, r17, r18, r19, r20` are loaded into `R18, R20, R22, Zlo, Xlo` and `loop::userPin, DAT_mem_0188, DAT_mem_0189, DAT_mem_018a, DAT_mem_018b` are loaded into `R25, R19, R21, R23, Zhi` respectively. After that, the Assembly code moves the content of R7 into R24 and then it's gonna compare `R25, R19, R21, R23, Zhi` with `R24, R18, R20, R22, Zlo` respectively. 
+
+However, `Xlo` that holds the content of `r20`, which is 6 (the last digit of the PIN number) is not present in the comparison and there is a new number that was supposed to be a part of the PIN number as the first digit which is `R24` that holds the content of `R7`. Thus, we could say 89076 is incorrect PIN. 
+
+Then, what is the PIN number of the safe box? Let's take a look at the decompiled source code. 
 
 ```C
 if ((((loop::userPin != R7) || (DAT_mem_0188 != r16)) || (DAT_mem_0189 != r17)) ||
@@ -37,4 +45,6 @@ else {
 
 In the first if-else statement, we see that there are 5 conditional statements. If any of these conditional statements are true (which means the user input is not equal to the actual PIN), the PIN number is incorrect.
 
-Assuming that `loop::userPin, DAT_mem_0188, DAT_mem_0189, DAT_mem_018a, DAT_mem_018b` is the user input, then `R7, r16, r17, r18, r19` should be the PIN number of the safe box. Since we know that the value for r16 is 8, r17 is 9, and r19 is 7, now we need to find the value 
+Assuming that `loop::userPin, DAT_mem_0188, DAT_mem_0189, DAT_mem_018a, DAT_mem_018b` is the user input, then `R7, r16, r17, r18, r19` should be the PIN number of the safe box. Since we know that the values for `r16 = 8, r17 = 9, and r19 = 7`, we need to find the values of `R7` and `r18` to complete the PIN number, _89_7.
+
+In line 83 of the decompiled source code, we can see that the variable `R7` is assigned with a value `'\x01'` which is 1 in hexadecimal thus making the PIN number 189_7. Hence, we can do trial and error to unlock the safe box. By any chance if `r18 = 0` just like in the Solution section, then the PIN number is 18907. 
