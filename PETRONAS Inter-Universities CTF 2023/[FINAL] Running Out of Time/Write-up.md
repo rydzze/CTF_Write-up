@@ -24,9 +24,9 @@ In my opinion, the PIN number of the safe box should not be 89076 because it doe
 
 ![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/0f129328-2b56-4a69-a382-a99e29140b6b)
 
-We could see that `r16, r17, r18, r19, r20` are loaded into `R18, R20, R22, Zlo, Xlo` and `loop::userPin, DAT_mem_0188, DAT_mem_0189, DAT_mem_018a, DAT_mem_018b` are loaded into `R25, R19, R21, R23, Zhi` respectively. After that, the Assembly code moves the content of R7 into R24 and then it's gonna compare `R25, R19, R21, R23, Zhi` with `R24, R18, R20, R22, Zlo` respectively. 
+We could see that `r16, r17, r18, r19, r20` are loaded into `R18, R20, R22, Zlo, Xlo` and `loop::userPin, DAT_mem_0188, DAT_mem_0189, DAT_mem_018a, DAT_mem_018b` are loaded into `R25, R19, R21, R23, Zhi` respectively. After that, the Assembly code moves the content of `R7` into `R24` and then it's gonna compare `R25, R19, R21, R23, Zhi` with `R24, R18, R20, R22, Zlo` respectively. 
 
-However, `Xlo` that holds the content of `r20`, which is 6 (the last digit of the PIN number) is not present in the comparison and there is a new number that was supposed to be a part of the PIN number as the first digit which is `R24` that holds the content of `R7`. Thus, we could say 89076 is incorrect PIN. 
+However, `Xlo` that holds the content of `r20`, which is 6 (the last digit of the PIN number) is not present in the comparison and there is a new number that was supposed to be a part of the PIN number as the first digit which is `R24` that holds the content of `R7`. Thus, we could say 89076 is the incorrect PIN. 
 
 Then, what is the PIN number of the safe box? Let's take a look at the decompiled source code. 
 
