@@ -22,11 +22,11 @@ int checkPassword(char* pass){
 
 ### 🤔 Hint 
 
-> _"What is ![ASCII](http://www.asciitable.com/)?"_
+> _"What is [ASCII](http://www.asciitable.com/)?"_
 
 ### ✨ Solution
 
-Subtract the decimal value for each ASCII character inside `correct_pass`.
+Subtract the decimal value for each ASCII character inside `correct_pass`. You may write a short script.
 
 ```C
   pass[0] == 'A'
