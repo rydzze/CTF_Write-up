@@ -26,7 +26,7 @@ int checkPassword(char* pass){
 
 ### ✨ Solution
 
-Subtract the decimal value for each ASCII character inside `correct_pass`. You may write a short script.
+Subtract the decimal value for each ASCII character inside `correct_pass`. You may write a short script to calculate it automatically.
 
 ```C
   pass[0] == 'A'
