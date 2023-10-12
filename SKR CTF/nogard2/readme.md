@@ -25,6 +25,8 @@ Double left-click _~lol~_ on the `part1` variable and eventually, it will lead u
 
 Convert the hex values of `part1` and `enc` to ASCII characters, then XOR `part1` with `enc` to get `part2` by using [CyberChef](https://gchq.github.io/CyberChef/#recipe=XOR(%7B'option':'UTF8','string':''%7D,'Standard',false))
 
+![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/b382f64a-e66f-4307-9f53-e095b72ebc97)
+
 ### 🏳️ Flag
 
 Hence, the flag is `SKR{XoRF0rL1f3!}` 
