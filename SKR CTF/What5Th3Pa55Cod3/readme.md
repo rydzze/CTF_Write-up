@@ -35,8 +35,8 @@ public void onTextChanged(CharSequence s, int start, int before, int count) {
 ```
 
 Now, we have obtained two strings which are "**6666**" and "**19971025**".
-**6666** might be a passcode and **199710125** looks like a date of birth.
-So, donwload the APK file first to unveil the secret.
+**"6666"** might be a passcode and **"19971025"** looks like a date of birth.
+So, download the APK file first to unveil the secret.
 
 Once you downloaded the `mysecret.apk`, you are required to insert the passcode and date of birth.
 So, fill it and then, it will display the flag.
