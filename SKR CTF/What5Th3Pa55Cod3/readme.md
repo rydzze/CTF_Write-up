@@ -21,21 +21,21 @@ After that, I jump straight to the `MainActivity` and `Main2Activity` inside /co
 ```Java
 //from MainActivity
 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.toString().equals("6666")) {
-                    MainActivity.this.startActivity(new Intent(MainActivity.this, Main2Activity.class));
-                }
-            }
+    if (s.toString().equals("6666")) {
+        MainActivity.this.startActivity(new Intent(MainActivity.this, Main2Activity.class));
+    }
+}
 
 //from Main2Activity
 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.toString().equals("19971025")) {
-                    Main2Activity.this.startActivity(new Intent(Main2Activity.this, SecretActivity.class));
-                }
-            }
+    if (s.toString().equals("19971025")) {
+        Main2Activity.this.startActivity(new Intent(Main2Activity.this, SecretActivity.class));
+    }
+}
 ```
 
 Now, we have obtained two strings which are "**6666**" and "**19971025**".
-**"6666"** might be a passcode and **"19971025"** looks like a date of birth.
+"**6666**" might be a passcode and "**19971025**" looks like a date of birth.
 So, download the APK file first to unveil the secret.
 
 Once you downloaded the `mysecret.apk`, you are required to insert the passcode and date of birth.
