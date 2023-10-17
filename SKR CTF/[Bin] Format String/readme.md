@@ -12,8 +12,7 @@ Format string is one of the common vuln in Binary, see can you leak the flag out
 
 ### ✨ Solution
 
-When we look at the source code, we can see that the gets function is vulnerable to format string attacks. So, what we can do is pass it a string `%x` to read the stack.
-We know that the header of the flag, `SKR{` is `534b527b` in hex. Thus, it should be easier for us to locate where is the flag in the stack.
+When we look at the source code, we can see that the gets function is vulnerable to format string attacks. So, what we can do is pass it a string `%x` or `%p` to read the stack. We know that the header of the flag, `SKR{` is `534b527b` in hex. Thus, it should be easier for us to locate where is the flag in the stack.
 
 In this case, I copied and compiled the source code, and ran it locally first with a fake flag, `CTF{th1s_1s_f4k3_f14g_sorry_:D}` (`CTF{` is `4354467b` in hex) stored in flag.txt.
 
