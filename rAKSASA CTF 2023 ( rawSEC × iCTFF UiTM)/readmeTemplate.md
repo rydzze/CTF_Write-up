@@ -1,4 +1,4 @@
-## <challName>
+## challName
 
 ### 📚 Overview
 
