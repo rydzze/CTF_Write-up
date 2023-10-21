@@ -8,7 +8,7 @@ Open the app to show the flag!
 
 When we run the `showflag.exe`, it will give us one of the five images randomly.
 
-Now, open the `showflag.exe` and look at the class `flags` (refer to the image below).
+Now, open the `showflag.exe` in [dnSpy](https://github.com/dnSpy/dnSpy) and look at the class `flags` (refer to the image below).
 
 ![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/ce1d125e-ef33-4e8d-a962-92c56534009b)
 
