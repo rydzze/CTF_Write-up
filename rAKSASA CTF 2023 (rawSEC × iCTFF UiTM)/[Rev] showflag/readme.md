@@ -6,7 +6,7 @@ Open the app to show the flag!
 
 ### ✨ Solution
 
-When we run the `showflag.exe`, it will give us one of the five images randomly.
+When we run the `showflag.exe`, it will give us one out of the five images randomly.
 
 Now, open the `showflag.exe` in [dnSpy](https://github.com/dnSpy/dnSpy) and look at the class `flags` (refer to the image below).
 
