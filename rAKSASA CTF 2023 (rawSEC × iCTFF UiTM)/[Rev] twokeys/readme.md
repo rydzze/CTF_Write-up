@@ -1,4 +1,4 @@
-## challName
+## Two Keys
 
 ### 📚 Overview
 
@@ -38,7 +38,7 @@ In short, the code will XOR every character of the `first key` with every charac
 We are able to find the value of `enc[]` as it is already stored within the programme. Now, we have to find the `first key`.
 
 Since the programme itself will display the flag and the loop will iterate 10 times, it is safe to say that the `first key` is "WSCTF2021{".
-Then, I find the `second key` using a simple script that XOR `first key` with `enc`
+Then, I find the `second key` using a simple script that XOR `first key` with `enc`.
 
 ```python
 enc = [0x0f, 0x63, 0x11, 0x60, 0x0a, 0x03, 0x56, 0x01, 0x10, 0x06]
