@@ -42,7 +42,7 @@ In short, the programme will ask for a code and then it will go through four con
 3. local_14[0] == 0x3f2
 4. local_1c * 0xc0d3 + local_20 == 0x3cbbd6c
 
-You may solve this question with simple math skills or we can create a script to solve it automatically for us.
+You may solve this question with simple math skills or we can create a code to solve it automatically for us.
 
 ```python
 #!/usr/bin/env python3

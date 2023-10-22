@@ -1,7 +1,1 @@
 K5JUGVCGPNGTAUSTIVPUGMCEIVPUOMCFKNPVIVKOKVHFK7I=
-
-base32 ... pw = booboo 
-
-Zheep Thou John is a soldier veteran. He left us a sound file. Will you discover what it contains?
-
-Note: Flag is in WSCTF{XXXXXXXXXXXXXXXXX} format.

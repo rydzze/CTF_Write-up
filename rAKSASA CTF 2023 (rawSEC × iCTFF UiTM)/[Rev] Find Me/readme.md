@@ -20,7 +20,7 @@ On the left side, we can see a `hiddenFunction` within the Symbol Tree section s
 ![image](https://github.com/rydzze/CTF_Write-up/assets/86187059/37c2cd6f-9b44-472e-b4e1-3e719c333789)
 
 The **for loop** will XOR every item inside the bend array with the hexadecimal value of 0x12 and display it.
-In this case, I did a simple script to display the output. 
+In this case, I created a short code to automate the process and display the output. 
 
 ```python
 hex_array = [0x45, 0x41, 0x51, 0x46, 0x54, 0x20, 0x22, 0x20, 0x23, 0x69, 0x27, 0x23, 0x7F,
