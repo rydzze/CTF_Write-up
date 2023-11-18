@@ -10,8 +10,8 @@ Crack me if you can!
 
 ### ✨ Solution
 
-I have not managed to solve it yet, will be updating it later _**sob sob**_
+[Solved](https://skrctf.me/teams/1818)!
 
 ### 🏳️ Flag
 
-Hence, the flag is `SKR{}` 
+Hence, the flag is `( ͡° ͜ʖ ͡°)` 
