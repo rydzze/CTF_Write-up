@@ -4,7 +4,7 @@
 
 ![Reverse It](https://github.com/rydzze/CTF_Write-up/assets/86187059/b4f60b5a-6355-4eb0-beca-7f1bd310d67a)
 
-```
+```python
 my_string = "My_Strings"
 my_result = ""
 
