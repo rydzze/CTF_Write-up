@@ -1,3 +1,3 @@
-### Welcome to my Capture the Flag 🏳️ repository :D
+### Capture the Flag 🏳️ :D
 
-Mainly focusing on **Reverse Engineering** (and _**Binary Exploitation**_ perhaps XD)
+Mainly focusing on **Reverse Engineering** and _**Binary Exploitation**_
