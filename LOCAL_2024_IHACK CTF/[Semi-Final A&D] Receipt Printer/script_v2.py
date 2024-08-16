@@ -16,7 +16,7 @@ for ip in IP_LIST:
 	p.sendline(b'cd ../../..')
 	p.sendline(b'usr/local/bin/flag')
 	
-	flag = p.recvline()
+	flag = p.recvall(timeout=1).strip()
 	flags.append(flag.decode())
 
 	p.close()
