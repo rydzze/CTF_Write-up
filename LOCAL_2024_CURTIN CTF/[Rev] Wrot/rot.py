@@ -1,0 +1,26 @@
+def enc_shift(n: int, bits: int, shift: int, direction: str = 'left') -> int:
+    bit_len = bits
+    
+    if direction == 'left':
+        return ((n << shift) | (n >> (bit_len - shift))) & ((1 << bit_len) - 1)
+    elif direction == 'right':
+        return ((n >> shift) | (n << (bit_len - shift))) & ((1 << bit_len) - 1)
+    else:
+        raise ValueError("Something's not right\n")
+
+
+
+flag = 'LOST_FLAG'
+shifted = []
+bits = 8
+
+for i in range(len(flag)):
+    if (i%2 == 0):
+        shifted.append(enc_shift(ord(flag[i]), bits, 2, 'left'))
+    else:
+        shifted.append(enc_shift(ord(flag[i]), bits, 2, 'right'))
+
+
+print(shifted)
+
+# enc = [153, 27, 133, 217, 237, 146, 49, 14, 49, 210, 9, 153, 153, 205, 145, 157, 212, 221, 193, 157, 9, 82, 228, 21, 13, 215, 185, 219, 125, 152, 165, 29, 205, 215, 177, 12, 212, 205, 245]
